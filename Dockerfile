@@ -14,8 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the React app
-RUN npm run build
-
+RUN npm run dev
 # Use an official Nginx image to serve the built app
 FROM nginx:alpine
 
@@ -26,4 +25,4 @@ COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
 
 # Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm run dev"]
