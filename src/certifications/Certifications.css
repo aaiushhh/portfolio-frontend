@@ -1,0 +1,11 @@
+.certifications-container{
+    width: 50%;
+    border-left: 2px solid white;
+    color: white;
+    padding-left: 10px;
+}
+
+.certifications-container h1{
+    font-size: 4.2dvh;
+    font-family: 'Cousine', monospace;
+}

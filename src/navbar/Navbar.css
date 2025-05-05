@@ -1,0 +1,120 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    height: 10dvh;
+    width: 100%;
+    color: #fff;
+    /* text-decoration: ; */
+    /* font-family: 'Inter', monospace; */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5dvh;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.navbar:hover {
+    background-color: #202020;
+}
+
+.navbar-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+    font-family: 'Nothing You Could Do', cursive;
+    padding-right: 40px;
+    
+}
+
+.navbar-left a, .navbar-right a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.navbar-center a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    
+}
+
+.navbar a {
+    display: flex;
+}
+
+.navbar a:active{
+    color: lightblue;
+}
+
+.navbar a:hover {
+    color: lightblue;
+}
+
+.navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    padding-left: 40px;
+}
+
+.navbar-right a {
+    display: flex;
+    align-items: end;
+}
+
+.left-margin {
+    margin-left: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar-center {
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        font-size: 2dvh;
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .navbar-left {
+        display: none;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .left-margin {
+        margin-left: 0;
+    }
+
+    .navbar-center {
+        flex-wrap: wrap;
+    }
+
+    .navbar-center a {
+        margin: 5px;
+        align-items: center;
+    }
+}

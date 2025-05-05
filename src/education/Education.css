@@ -1,0 +1,97 @@
+.education-container {
+    width: 40%;
+    height: auto;
+    border: 1px solid #414141;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    background-image: linear-gradient(#1b1b1b, #191919, #131313);
+    font-family: 'Istok Web', monospace;
+}
+
+.education-container h1 {
+    font-size: 4dvh;
+    font-family: 'Cousine', monospace;
+    margin-bottom: 15px;
+}
+
+.education-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4dvh;
+}
+
+.bachelor-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4dvh;
+    font-weight: 400;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    color: #858585;
+    border-left: 1px solid #414141;
+    padding-left: 7px;
+}
+
+.education-container ul li {
+    padding-left: 10px;
+    list-style: none;
+    font-size: 2dvh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .education-container {
+        width: 60%;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .education-container {
+        width: 85%;
+        padding: 12px;
+    }
+
+    .bachelor-detail {
+        font-size: 2dvh;
+        padding-left: 5px;
+    }
+
+    .education-container h1 {
+        font-size: 3.2dvh;
+    }
+
+    .education-container h2 {
+        font-size: 2.2dvh;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .education-container {
+        width: 98%;
+        padding: 10px;
+        background-image: linear-gradient(#1b1b1b, #191919, #131313);
+    }
+
+    .education-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .education-container h2 {
+        font-size: 1rem;
+    }
+
+    .bachelor-detail {
+        font-size: 0.8rem;
+        padding-left: 4px;
+    }
+
+    .education-container ul li {
+        font-size: 0.75rem;
+    }
+}
+
+.special{
+    color: rgb(116, 174, 255);
+}

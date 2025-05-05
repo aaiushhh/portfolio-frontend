@@ -1,0 +1,125 @@
+.tech-stack-container {
+    width: 40%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.tech-stack-container h1 {
+    font-size: 4.7dvh;
+    font-family: 'Playfair Display', serif;
+}
+
+.tech-stack-content {
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    
+}
+
+.tech-stack-row {
+    display: flex;
+    white-space: nowrap;
+    
+}
+
+.tech-stack-item {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    padding: 10px 20px;
+}
+
+.tech-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Animations remain the same */
+.row1 {
+    animation: slideLeft 15s linear infinite;
+}
+
+.row2 {
+    animation: slideRight 15s linear infinite;
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
+
+.tech-stack-row > * {
+    flex-shrink: 0;
+}
+
+.tech-stack-row:hover {
+    animation-play-state: paused;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .tech-stack-container {
+        width: 60%;
+    }
+
+    .tech-stack-container h1 {
+        font-size: 4dvh;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .tech-stack-container {
+        width: 85%;
+    }
+
+    .tech-stack-container h1 {
+        font-size: 3.2dvh;
+    }
+
+    .tech-stack-content {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .tech-stack-item {
+        padding: 8px 15px;
+    }
+
+    .tech-icon {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .tech-stack-container {
+        width: 95%;
+        padding: 15px 0;
+    }
+
+    .tech-stack-container h1 {
+        font-size: 4dvh;
+    }
+
+    .tech-stack-content {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .tech-stack-item {
+        padding: 6px 12px;
+    }
+
+    .tech-icon {
+        font-size: 1.2rem;
+    }
+}

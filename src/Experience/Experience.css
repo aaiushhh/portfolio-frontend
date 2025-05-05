@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+.experience-container{
+    width: 40%;
+    /* height: 88dvh; */
+}
+
+.internship-slider{
+    display: flex;
+    width: 100%;
+    height: 45dvh;
+    border: 1px solid #414141;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.certificates {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.content{
+    height: 100%;
+    width: 78%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(#1b1b1b, #191919, #131313);
+    border-left: 1px solid #414141;
+    border-right: 1px solid #414141;
+}
+.right-button, .left-button{
+    height: 100%;
+    width: 12%;
+    background-image: linear-gradient(145deg, #151515, #111111, #0a0a0a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    color: #666666;
+}
+
+.right-button:hover, .left-button:hover {
+    background-image: linear-gradient(145deg, #181818, #141414, #0d0d0d);
+    color: #858585;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.10;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 10px;
+    padding: 16px 20px;
+    color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.comp {
+    margin: 0 0 15px 0;
+    /* font-size: 1.8rem; */font-family: 'Lora', serif;
+    font-family: 'JetBrains Mono', monospace;
+
+    
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #858585;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .experience-container {
+        width: 60%;
+    }
+    .internship-logo-large {
+        width: 70px;
+        height: 70px;
+    }
+    .role-badge-blue {
+        font-size: 0.85rem;
+        padding: 3px 10px;
+    }
+    .card .company {
+        font-size: 1.05rem;
+    }
+    .dates {
+        font-size: 0.95rem;
+    }
+    .description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .experience-container {
+        width: 85%;
+    }
+    
+    .right-button, .left-button {
+        font-size: 2rem;
+    }
+    
+    .card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card p {
+        font-size: 1rem;
+    }
+    .internship-logo-large {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .role-badge-blue {
+        font-size: 0.85rem;
+        padding: 3px 10px;
+        margin-bottom: 8px;
+    }
+    .card .company {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    .dates {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+    .description {
+        font-size: 0.95rem;
+        margin-top: 8px;
+        text-align: center;
+    }
+    .dates {
+        display: none;
+    }
+    .card-content {
+        padding: 10px 6px;
+        font-size: 0.95rem;
+    }
+    .card-content h3.company {
+        font-size: 1.1rem;
+    }
+    .role-badge-blue {
+        font-size: 0.8rem;
+        padding: 2px 8px;
+        margin-bottom: 6px;
+    }
+    .description {
+        font-size: 0.9rem;
+        margin-top: 6px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .experience-container {
+        width: 98%;
+    }
+    
+    .right-button, .left-button {
+        font-size: 1.8rem;
+    }
+    
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card p {
+        font-size: 0.9rem;
+    }
+    .internship-logo-large {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 8px;
+    }
+    .role-badge-blue {
+        font-size: 0.8rem;
+        padding: 2px 8px;
+        margin-bottom: 6px;
+    }
+    .card .company {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+    .dates {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    .description {
+        font-size: 0.85rem;
+        margin-top: 6px;
+    }
+    .card-content {
+        padding: 6px 2px;
+        font-size: 0.85rem;
+    }
+    .card-content h3.company {
+        font-size: 1rem;
+    }
+    .role-badge-blue {
+        font-size: 0.75rem;
+        padding: 1px 6px;
+        margin-bottom: 4px;
+    }
+    .description {
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+}
+
+.certificate-card {
+    width: 100%;
+    min-height: 80px;
+    background: rgba(30, 30, 40, 0.85);
+    border: 1px solid #353535;
+    border-radius: 14px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12), 0 1.5px 6px 0 rgba(79,195,247,0.08);
+    margin-bottom: 16px;
+    backdrop-filter: blur(2px);
+    position: relative;
+}
+
+.certificate-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(79,195,247,0.18), 0 2px 8px 0 rgba(0,0,0,0.12);
+    transform: translateY(-3px) scale(1.02);
+    border-color: #666;
+}
+
+.certificate-image {
+    min-width: 80px;
+    width: 80px;
+    height: 100%;
+    background: #232323;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-right: 1px solid #353535;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    background: #222;
+    display: block;
+    margin: 0;
+    box-shadow: none;
+}
+
+.certificate-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px 20px;
+    width: 100%;
+    min-width: 0;
+    gap: 2px;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+
+.certificate-name {
+    /* font-family: 'JetBrains Mono', monospace; */
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+    line-height: 1.1;
+    text-align: left;
+    padding: 0;
+    display: block;
+    /* text-decoration: do; */
+}
+
+.certificate-provider {
+    font-size: 0.85rem;
+    font-family: 'Libre Baskerville', serif;
+    /* colo */
+    color: #b0b0b0;
+    margin-bottom: 2px;
+    margin-top: 0;
+    /* font-family: 'JetBrains Mono', monospace; */
+    text-align: left;
+    font-weight: 400;
+}
+
+.certificate-description {
+    font-size: 0.68rem;
+    color: #d2d2d2;
+    margin-top: 2px;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: left;
+    max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .certificate-card {
+        min-height: 65px;
+    }
+    .certificate-image {
+        width: 55px;
+        height: 55px;
+    }
+    .certificate-name {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certificate-card {
+        min-height: 50px;
+    }
+    .certificate-image {
+        width: 40px;
+        height: 40px;
+    }
+    .certificate-name {
+        font-size: 0.85rem;
+        padding: 0 6px;
+    }
+}
+
+.internship-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.internship-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    background: #222;
+    border: 1px solid #414141;
+    object-fit: contain;
+}
+.card .comp {
+    font-weight: 600;
+    color: #d2d2d2;
+    
+    /* font-family: 'Inter', sans-serif; */
+}
+.card .duration {
+    font-size: 1rem;
+    color: #858585;
+}
+.card .description {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #d2d2d2;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 4px;
+    word-break: break-word;
+}
+
+.card .description::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+.card .description::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.card-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.role-badge {
+  background: #232323;
+  color: #ffd700;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.2px;
+  display: inline-block;
+}
+
+.card-main-info .company {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-family: 'Cousine', monospace;
+  font-weight: 700;
+}
+
+.dates {
+  font-size: 0.95rem;
+  
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* font-family: 'Libre Baskerville', serif; */
+
+}
+.dates span{
+    font-family: 'Libre Baskerville', serif;
+    /* colo */
+    color: #b0b0b0;
+}
+
+.date-separator {
+  margin: 0 2px;
+}
+
+.description {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #d0d0d0;
+  text-align: left;
+}
+
+.internship-logo-large {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.internship-logo-large img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  background: #222;
+  border: 2px solid #4fc3f7;
+  object-fit: contain;
+  box-shadow: 0 2px 10px rgba(79,195,247,0.08);
+}
+
+.role-badge-blue {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 3px 14px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .company {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  font-family: 'Cousine', monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dates {
+  font-size: 1rem;
+  color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.date-separator {
+  margin: 0 2px;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #a0a0a0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .dates {
+    display: none !important;
+  }
+}

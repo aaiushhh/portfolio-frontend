@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  /* position: relative; Added for better mobile handling */
+}
+
+/* Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+
+
+
+*{
+  scroll-behavior: smooth;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #000000;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.content-container {
+  padding-top: 8dvh; /* Should match your navbar height */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #fff;
+}
+
+.section {
+  width: 100%;
+  min-height: 87dvh; 
+  /* Changed to dvh for better mobile support */ 
+  /* margin-top: 10px; */
+  scroll-margin-top: 10dvh;
+  padding: 20px;
+  /* justify-content: flex-start; */
+  align-items: center;
+  display: flex;
+  flex-direction: column; /*Added for better mobile layout*/
+  /* align-items: start; */
+  justify-content: space-evenly;
+}
+.edu-certi-container{
+  display: flex;
+  width: 100%;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .content-container {
+    /* padding-top: 8dvh; */
+  }
+ 
+  
+}
+ 
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .section {
+    /* padding: 10px; */
+    margin-top: 5dvh;
+    /* justify-content: center; */
+    scroll-margin-top: 15dvh;
+  }
+}
+

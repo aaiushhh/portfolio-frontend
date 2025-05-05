@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&family=Source+Serif+Pro:wght@400;500&display=swap');
+
+.name-card-container {
+    width: 40%;
+    height: auto;
+    border: 1px solid #414141;
+    padding: 15px;
+    border-radius: 10px;
+    margin:10px;
+    background-image: linear-gradient(#1b1b1b, #191919, #131313);
+
+}
+
+.name-card-content {
+    padding: 5px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: 'Istok Web', monospace;
+    text-wrap: wrap;
+   
+}
+
+.name-card-content h1 {
+    font-size: 4dvh;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+.name-card-content-description {
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    margin-top: 3px;
+    font-size: 2dvh;
+}
+
+.name-card-content-location {
+    color: #858585;
+    border-left: 1px solid #414141;
+    padding-left: 7px;
+    font-size: 2.4dvh;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-left: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.name-card-content-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.name-card-content-header a {
+    font-size: 4dvh;
+    color: #ffffff;
+    padding: 0 5px;
+}   
+.name-card-content-header a:hover {
+    color: #858585;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .name-card-container {
+        width: 60%;
+    }
+
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .name-card-container {
+        width: 85%;
+        padding: 12px;
+    }
+
+    .name-card-content {
+        padding: 3px;
+        /* font-size: 0.8rem; */
+    }
+
+  
+
+   
+
+    .name-card-content-location {
+        /* font-size: 0.9rem; */
+        padding-left: 4px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .name-card-container {
+        width: 98%;
+        padding: 10px;
+        background-image: linear-gradient( #1b1b1b,#191919, #131313);
+    }
+
+    .name-card-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .name-card-content-description {
+        font-size: 0.75rem;
+    }
+
+    .name-card-content-location {
+        font-size: 0.8rem;
+    }
+    .name-card-content-header div{
+        display: flex;
+        justify-content: space-between;
+    }
+}
