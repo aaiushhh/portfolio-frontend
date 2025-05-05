@@ -1,17 +1,26 @@
-FROM node:18-alpine
+# Use Node.js LTS image
+FROM node:16
 
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
+# Copy package.json and package-lock.json
+COPY package.json .
+
 # Install dependencies
-COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy the rest of the app
+# Copy the application code
 COPY . .
 
-# Expose the port your dev server runs on (Vite: 5173, React: 3000)
+# Build the frontend
+RUN npm run build
+
+# Install static server
+RUN npm install -g serve
+
+# Expose the port
 EXPOSE 5173
 
-# Run the development server
-CMD ["npm", "run", "dev"]
+# Start the app on port 5173
+CMD ["serve", "-s", "dist", "-l", "5173"]
