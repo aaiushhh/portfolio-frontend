@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000/api"; // Replace with your deployed backend URL if hosted
+const API_BASE_URL = "https://application-90.1tpm5dczf740.us-east.codeengine.appdomain.cloud/api"; // Replace with your deployed backend URL if hosted
 
 // ----------------- INTRO -----------------
 export const getIntro = async () => {
