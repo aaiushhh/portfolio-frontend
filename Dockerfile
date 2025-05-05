@@ -1,28 +1,17 @@
-# Use an official Node.js runtime as the base image
-FROM node:18-alpine AS build
+FROM node:18-alpine
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package.json package-lock.json ./
-
 # Install dependencies
+COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy the rest of the application code
+# Copy the rest of the app
 COPY . .
 
-# Build the React app
-RUN npm run dev
-# Use an official Nginx image to serve the built app
-FROM nginx:alpine
+# Expose the port your dev server runs on (Vite: 5173, React: 3000)
+EXPOSE 5173
 
-# Copy the built React app from the previous stage to the Nginx web root
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# Start Nginx
-CMD ["npm run dev"]
+# Run the development server
+CMD ["npm", "run", "dev"]
