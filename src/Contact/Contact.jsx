@@ -12,7 +12,7 @@ const Contact = () => {
             message: form.message.value,
         };
 
-        await fetch('http://localhost:3000/contact/contact', 
+        await fetch('https://application-90.1tpm5dczf740.us-east.codeengine.appdomain.cloud/contact/contact', 
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
