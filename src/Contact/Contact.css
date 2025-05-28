@@ -19,7 +19,7 @@
 
 .contact-form {
     width: 35%;
-    height: 60dvh;
+    /* height: 60dvh; */
     background-image: linear-gradient(#1b1b1b, #191919, #131313);
     border: 1px solid #414141;
     border-radius: 10px;
