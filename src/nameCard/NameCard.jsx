@@ -1,17 +1,20 @@
 import './NameCard.css';
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from 'react';
-
+import { getIntro } from '../api/api';
 export const NameCard = () => {
   const [introData, setIntroData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/intro')
-      .then(res => res.json())
-      .then(data => setIntroData(data.intro))
-      .catch(err => console.error("Failed to fetch intro data:", err));
+    const fetchIntro = async () => {
+      const data = await getIntro();
+      if (data) {
+        setIntroData(data.intro);
+      }
+    };
+    fetchIntro();
   }, []);
-
+  
   return (
     <div className='name-card-container'>
       <div className='name-card-content'>
