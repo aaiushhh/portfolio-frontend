@@ -112,6 +112,9 @@
     .experience-container {
         width: 60%;
     }
+    .card-content {
+        padding: 12px;
+    }
     .internship-logo-large {
         width: 70px;
         height: 70px;
@@ -136,15 +139,15 @@
     .experience-container {
         width: 85%;
     }
-    
+    .card-content {
+        padding: 12px;
+    }
     .right-button, .left-button {
         font-size: 2rem;
     }
-    
     .card h3 {
         font-size: 1.5rem;
     }
-    
     .card p {
         font-size: 1rem;
     }
@@ -175,7 +178,7 @@
         display: none;
     }
     .card-content {
-        padding: 10px 6px;
+        padding: 10px;
         font-size: 0.95rem;
     }
     .card-content h3.company {
@@ -197,15 +200,15 @@
     .experience-container {
         width: 98%;
     }
-    
+    .card-content {
+        padding: 10px;
+    }
     .right-button, .left-button {
         font-size: 1.8rem;
     }
-    
     .card h3 {
         font-size: 1.3rem;
     }
-    
     .card p {
         font-size: 0.9rem;
     }
@@ -232,7 +235,7 @@
         margin-top: 6px;
     }
     .card-content {
-        padding: 6px 2px;
+        padding: 8px;
         font-size: 0.85rem;
     }
     .card-content h3.company {
