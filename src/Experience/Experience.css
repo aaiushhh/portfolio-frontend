@@ -274,7 +274,7 @@
 
 .certificate-image {
     min-width: 80px;
-    width: 80px;
+    width: 20%;
     height: 100%;
     background: #232323;
     display: flex;
@@ -302,7 +302,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 12px 20px;
-    width: 100%;
+    width: 80%;
     min-width: 0;
     gap: 2px;
     font-family: 'Playfair Display', serif;
@@ -351,12 +351,16 @@
         min-height: 65px;
     }
     .certificate-image {
-        width: 55px;
-        height: 55px;
+        min-width: 65px;
+        width: 35%;
+    }
+    .certificate-info {
+        width: 65%;
+        padding: 8px 12px;
     }
     .certificate-name {
         font-size: 0.95rem;
-        padding: 0 10px;
+        padding: 0;
     }
 }
 
@@ -365,12 +369,16 @@
         min-height: 50px;
     }
     .certificate-image {
-        width: 40px;
-        height: 40px;
+        min-width: 50px;
+        width: 35%;
+    }
+    .certificate-info {
+        width: 65%;
+        padding: 6px 8px;
     }
     .certificate-name {
         font-size: 0.85rem;
-        padding: 0 6px;
+        padding: 0;
     }
 }
 
