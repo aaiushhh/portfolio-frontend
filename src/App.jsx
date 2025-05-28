@@ -38,10 +38,12 @@ function App() {
         </div>
         <div className="section" id="experience">
           {/* <h2>Experience Section</h2> */}
+          <h1 className='tech-stack-container'>Experience</h1>
           <Experience />
           {/* Add your experience content here */}
         </div>
         <div className="section" id="projects">
+        <h1 className='tech-stack-container'>Projects</h1>
           {/* Dynamically render Project components */}
           {projects.map((project, idx) => (
             <Project key={project.id || idx} project={project} />
